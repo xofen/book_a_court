@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./select.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="left-container">
+        <div id="book-court">
+          <h1>Book a Court</h1>
+          <p class="location">Location</p>
+          <div class="dropdown">
+            <input type="text" placeholder="Pick a Country" readonly />
+            <ul class="options">
+              <li class="option">Singapore</li>
+              <li class="option">Brazil</li>
+            </ul>
+          </div>
+          <p class="duration">Duration</p>
+          <div class="dropdown">
+            <input type="text" placeholder="Pick a Duration" readonly />
+            <ul class="options">
+              <li class="option" onclick="">30 minutes</li>
+              <li class="option" onclick="duration60()">60 minutes</li>
+            </ul>
+          </div>
+          <div class="dark-mode-toggle">
+            <input type="checkbox" id="darkModeToggle" />
+            <label for="darkModeToggle"></label>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="right-container">
+        <h2>Pick a date and time</h2>
+        <div class="calendar">
+          <div class="calendar-header">
+            <div class="calendar-month">
+              <p id="current-month"></p>
+              <div class="prev-next">
+                <img
+                  class="btn prev-btn"
+                  src="./img/Button - Previous month.svg"
+                  alt="previous"
+                />
+                <img
+                  class="btn next-btn"
+                  src="./img/Button - Next month.svg"
+                  alt="previous"
+                />
+              </div>
+            </div>
+
+            <div class="calendar-body">
+              <div class="calendar-week">
+                <p class="calendar-day">Su</p>
+                <p class="calendar-day">Mo</p>
+                <p class="calendar-day">Tu</p>
+                <p class="calendar-day">We</p>
+                <p class="calendar-day">Th</p>
+                <p class="calendar-day">Fr</p>
+                <p class="calendar-day">Sa</p>
+              </div>
+
+              <div class="days" id="days"></div>
+            </div>
+          </div>
+
+          <div class="container-buttons">
+            <div id="selected-day"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./select.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
